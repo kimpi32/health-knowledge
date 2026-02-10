@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏥 Health Knowledge
 
-## Getting Started
+건강/의료 논문 정리 및 추천 플랫폼
 
-First, run the development server:
+## 📚 프로젝트 소개
+
+과학적 근거 기반의 건강 정보를 제공하는 플랫폼입니다. 최신 의학 논문을 분석하고 쉽게 이해할 수 있도록 정리하여, 실생활에 적용 가능한 건강 정보를 제공합니다.
+
+## 🎯 주요 기능
+
+### 1️⃣ 식이 (Nutrition)
+- 영양학 논문 요약
+- 과학 기반 식단 추천
+- 식품별 영양 정보
+
+### 2️⃣ 운동 (Exercise)
+- 운동 과학 논문 정리
+- 맞춤형 운동 루틴 추천
+- 운동 효과 분석
+
+### 3️⃣ 생활습관 (Lifestyle)
+- 수면, 스트레스 관리 연구
+- 건강한 생활습관 가이드
+- 과학적 근거 기반 권장사항
+
+### 4️⃣ 의료정보 (Medical Information)
+- 질병 예방 및 관리
+- 증상별 의료 정보
+- 최신 의학 연구 동향
+
+## 🛠️ 기술 스택
+
+- **Frontend**: Next.js 16, React 19, TypeScript
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel / Self-hosted
+
+## 🚀 시작하기
 
 ```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 빌드
+npm run build
+
+# 프로덕션 실행
+npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 프로젝트 구조
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+health-knowledge/
+├── app/
+│   ├── diet/              # 식이 카테고리
+│   │   ├── papers/        # 논문 정리
+│   │   └── recommendations/ # 추천 시스템
+│   ├── exercise/          # 운동 카테고리
+│   ├── lifestyle/         # 생활습관 카테고리
+│   └── medical/           # 의료정보 카테고리
+├── components/            # 재사용 컴포넌트
+└── public/               # 정적 파일
+```
 
-## Learn More
+## 📄 라이센스
 
-To learn more about Next.js, take a look at the following resources:
+MIT License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👤 Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Jiwon The Great**
+- Email: lowman@snu.ac.kr
+- GitHub: [@kimpi32](https://github.com/kimpi32)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*건강한 삶을 위한 과학적 정보* 🌱
