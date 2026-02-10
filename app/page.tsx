@@ -6,37 +6,37 @@ export default function Home() {
       id: "diet",
       title: "식이",
       subtitle: "Nutrition",
-      description: "영양학 논문 분석과 과학 기반 식단 추천",
+      description: "맛있게 먹으면서 건강해지는 법",
       icon: "🥗",
       color: "from-green-500 to-emerald-600",
-      stats: { papers: 120, recommendations: 45 }
+      stats: { articles: 120, guides: 45 }
     },
     {
       id: "exercise",
       title: "운동",
       subtitle: "Exercise",
-      description: "운동 과학 연구와 맞춤형 운동 루틴",
+      description: "5분 투자로 바뀌는 내 몸",
       icon: "💪",
       color: "from-blue-500 to-cyan-600",
-      stats: { papers: 95, recommendations: 38 }
+      stats: { articles: 95, guides: 38 }
     },
     {
       id: "lifestyle",
       title: "생활습관",
       subtitle: "Lifestyle",
-      description: "수면, 스트레스 관리 등 건강한 생활",
+      description: "하루를 바꾸는 작은 습관들",
       icon: "🌙",
       color: "from-purple-500 to-pink-600",
-      stats: { papers: 78, recommendations: 52 }
+      stats: { articles: 78, guides: 52 }
     },
     {
       id: "medical",
       title: "의료정보",
       subtitle: "Medical Info",
-      description: "질병 예방, 증상별 의료 정보",
+      description: "알아두면 쓸모있는 건강 상식",
       icon: "🏥",
       color: "from-red-500 to-orange-600",
-      stats: { papers: 156, recommendations: 67 }
+      stats: { articles: 156, guides: 67 }
     }
   ];
 
@@ -47,16 +47,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <span className="text-3xl">🏥</span>
+              <span className="text-3xl">📰</span>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Health Knowledge</h1>
-                <p className="text-sm text-gray-500">과학 기반 건강 정보 플랫폼</p>
+                <h1 className="text-2xl font-bold text-gray-900">Health Magazine</h1>
+                <p className="text-sm text-gray-500">AI가 전하는 쉬운 건강 이야기</p>
               </div>
             </div>
             <nav className="hidden md:flex items-center gap-6">
               <Link href="/about" className="text-gray-600 hover:text-gray-900 transition">소개</Link>
-              <Link href="/papers" className="text-gray-600 hover:text-gray-900 transition">논문</Link>
-              <Link href="/recommendations" className="text-gray-600 hover:text-gray-900 transition">추천</Link>
+              <Link href="/articles" className="text-gray-600 hover:text-gray-900 transition">전체 기사</Link>
+              <Link href="/guides" className="text-gray-600 hover:text-gray-900 transition">건강 가이드</Link>
             </nav>
           </div>
         </div>
@@ -65,24 +65,24 @@ export default function Home() {
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <h2 className="text-5xl font-bold text-gray-900 mb-4">
-          건강한 삶을 위한<br />
+          AI가 전하는<br />
           <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            과학적 정보
+            쉬운 건강 이야기
           </span>
         </h2>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-          최신 의학 논문을 분석하고 쉽게 이해할 수 있도록 정리하여,
-          실생활에 적용 가능한 건강 정보를 제공합니다.
+          최신 의학 연구를 AI가 분석하고 이해하기 쉬운 기사로 재구성했습니다.
+          매일 업데이트되는 건강 매거진을 경험해보세요.
         </p>
         <div className="flex items-center justify-center gap-4 text-sm text-gray-500">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            <span>449개 논문</span>
+            <span>이번 주 신규 기사 32개</span>
           </div>
           <span>•</span>
-          <div>202개 추천</div>
+          <div>매일 업데이트</div>
           <span>•</span>
-          <div>매주 업데이트</div>
+          <div>AI 재해석</div>
         </div>
       </section>
 
@@ -103,7 +103,7 @@ export default function Home() {
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-5xl mb-2">{category.icon}</div>
                   <div className={`px-3 py-1 rounded-full bg-gradient-to-r ${category.color} text-white text-xs font-medium`}>
-                    {category.stats.papers}개 논문
+                    {category.stats.articles}개 기사
                   </div>
                 </div>
 
@@ -113,12 +113,12 @@ export default function Home() {
 
                 <div className="flex items-center gap-4 text-sm text-gray-500">
                   <div className="flex items-center gap-1">
-                    <span>📄</span>
-                    <span>{category.stats.papers}개</span>
+                    <span>📰</span>
+                    <span>{category.stats.articles}개 기사</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <span>💡</span>
-                    <span>{category.stats.recommendations}개 추천</span>
+                    <span>📋</span>
+                    <span>{category.stats.guides}개 가이드</span>
                   </div>
                 </div>
 
@@ -138,7 +138,7 @@ export default function Home() {
       <footer className="border-t bg-white/80 backdrop-blur-sm mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-gray-500 text-sm">
-            <p>Health Knowledge © 2025 - 건강한 삶을 위한 과학적 정보 🌱</p>
+            <p>Health Magazine © 2025 - AI가 전하는 쉬운 건강 이야기 📰</p>
             <p className="mt-2">Made by <a href="https://github.com/kimpi32" className="text-indigo-600 hover:underline">@kimpi32</a></p>
           </div>
         </div>
