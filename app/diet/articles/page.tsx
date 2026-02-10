@@ -55,6 +55,60 @@ export default function DietArticlesPage() {
       date: "2025-02-03",
       readTime: "4분",
       image: "💧"
+    },
+    {
+      id: 7,
+      title: "비타민 D, 햇빛만으로 충분할까?",
+      summary: "한국인의 90%가 부족한 비타민 D, 효과적인 보충 방법을 알려드립니다.",
+      category: "영양제",
+      date: "2025-02-02",
+      readTime: "5분",
+      image: "☀️"
+    },
+    {
+      id: 8,
+      title: "탄수화물, 적으로만 보지 마세요",
+      summary: "통곡물과 정제 탄수화물의 차이, 그리고 건강한 탄수화물 섭취법.",
+      category: "영양소",
+      date: "2025-02-01",
+      readTime: "6분",
+      image: "🌾"
+    },
+    {
+      id: 9,
+      title: "오메가3, 생선 vs 영양제 뭐가 좋을까?",
+      summary: "EPA와 DHA의 차이점과 효과적인 오메가3 섭취 전략.",
+      category: "영양제",
+      date: "2025-01-31",
+      readTime: "5분",
+      image: "🐟"
+    },
+    {
+      id: 10,
+      title: "식이섬유, 왜 먹어야 할까?",
+      summary: "장 건강부터 혈당 조절까지, 식이섬유의 놀라운 효과.",
+      category: "영양소",
+      date: "2025-01-30",
+      readTime: "4분",
+      image: "🥦"
+    },
+    {
+      id: 11,
+      title: "케토 다이어트, 당신에게 맞을까?",
+      summary: "저탄수화물 고지방 식단의 장단점과 주의사항.",
+      category: "다이어트",
+      date: "2025-01-29",
+      readTime: "7분",
+      image: "🥑"
+    },
+    {
+      id: 12,
+      title: "카페인, 얼마나 마셔도 괜찮을까?",
+      summary: "커피와 차의 카페인 함량, 적정 섭취량과 부작용.",
+      category: "식습관",
+      date: "2025-01-28",
+      readTime: "5분",
+      image: "☕"
     }
   ];
 
@@ -87,7 +141,7 @@ export default function DietArticlesPage() {
             <span>총 120개 기사</span>
           </div>
           <span>•</span>
-          <div>이번 주 신규 6개</div>
+          <div>이번 주 신규 12개</div>
           <span>•</span>
           <div>매일 업데이트</div>
         </div>

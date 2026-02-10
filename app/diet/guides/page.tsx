@@ -37,6 +37,42 @@ export default function DietGuidesPage() {
       difficulty: "보통",
       duration: "2주",
       icon: "🥬"
+    },
+    {
+      id: 5,
+      title: "간헐적 단식 시작하기",
+      description: "16:8 방식부터 차근차근 시작하는 법",
+      steps: 4,
+      difficulty: "보통",
+      duration: "2주",
+      icon: "⏰"
+    },
+    {
+      id: 6,
+      title: "저염식 실천 가이드",
+      description: "고혈압 예방을 위한 나트륨 줄이기",
+      steps: 5,
+      difficulty: "쉬움",
+      duration: "3주",
+      icon: "🧂"
+    },
+    {
+      id: 7,
+      title: "채식 전환 가이드",
+      description: "단계별로 실천하는 플렉시테리언",
+      steps: 6,
+      difficulty: "어려움",
+      duration: "8주",
+      icon: "🌱"
+    },
+    {
+      id: 8,
+      title: "식단 일기 작성법",
+      description: "효과적인 식습관 개선을 위한 기록법",
+      steps: 3,
+      difficulty: "쉬움",
+      duration: "즉시",
+      icon: "📝"
     }
   ];
 
@@ -72,6 +108,8 @@ export default function DietGuidesPage() {
           <div>단계별 실천 가이드</div>
           <span>•</span>
           <div>체크리스트 포함</div>
+          <span>•</span>
+          <div>난이도별 분류</div>
         </div>
 
         {/* Guides Grid */}
