@@ -1,65 +1,148 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  const categories = [
+    {
+      id: "diet",
+      title: "식이",
+      subtitle: "Nutrition",
+      description: "영양학 논문 분석과 과학 기반 식단 추천",
+      icon: "🥗",
+      color: "from-green-500 to-emerald-600",
+      stats: { papers: 120, recommendations: 45 }
+    },
+    {
+      id: "exercise",
+      title: "운동",
+      subtitle: "Exercise",
+      description: "운동 과학 연구와 맞춤형 운동 루틴",
+      icon: "💪",
+      color: "from-blue-500 to-cyan-600",
+      stats: { papers: 95, recommendations: 38 }
+    },
+    {
+      id: "lifestyle",
+      title: "생활습관",
+      subtitle: "Lifestyle",
+      description: "수면, 스트레스 관리 등 건강한 생활",
+      icon: "🌙",
+      color: "from-purple-500 to-pink-600",
+      stats: { papers: 78, recommendations: 52 }
+    },
+    {
+      id: "medical",
+      title: "의료정보",
+      subtitle: "Medical Info",
+      description: "질병 예방, 증상별 의료 정보",
+      icon: "🏥",
+      color: "from-red-500 to-orange-600",
+      stats: { papers: 156, recommendations: 67 }
+    }
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Header */}
+      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <span className="text-3xl">🏥</span>
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900">Health Knowledge</h1>
+                <p className="text-sm text-gray-500">과학 기반 건강 정보 플랫폼</p>
+              </div>
+            </div>
+            <nav className="hidden md:flex items-center gap-6">
+              <Link href="/about" className="text-gray-600 hover:text-gray-900 transition">소개</Link>
+              <Link href="/papers" className="text-gray-600 hover:text-gray-900 transition">논문</Link>
+              <Link href="/recommendations" className="text-gray-600 hover:text-gray-900 transition">추천</Link>
+            </nav>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* Hero Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h2 className="text-5xl font-bold text-gray-900 mb-4">
+          건강한 삶을 위한<br />
+          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            과학적 정보
+          </span>
+        </h2>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+          최신 의학 논문을 분석하고 쉽게 이해할 수 있도록 정리하여,
+          실생활에 적용 가능한 건강 정보를 제공합니다.
+        </p>
+        <div className="flex items-center justify-center gap-4 text-sm text-gray-500">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span>449개 논문</span>
+          </div>
+          <span>•</span>
+          <div>202개 추천</div>
+          <span>•</span>
+          <div>매주 업데이트</div>
         </div>
-      </main>
+      </section>
+
+      {/* Categories Grid */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {categories.map((category) => (
+            <Link
+              key={category.id}
+              href={`/${category.id}`}
+              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
+            >
+              {/* Gradient Background */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+
+              {/* Content */}
+              <div className="relative">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-5xl mb-2">{category.icon}</div>
+                  <div className={`px-3 py-1 rounded-full bg-gradient-to-r ${category.color} text-white text-xs font-medium`}>
+                    {category.stats.papers}개 논문
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-gray-900 mb-1">{category.title}</h3>
+                <p className="text-sm text-gray-500 mb-3">{category.subtitle}</p>
+                <p className="text-gray-600 mb-6">{category.description}</p>
+
+                <div className="flex items-center gap-4 text-sm text-gray-500">
+                  <div className="flex items-center gap-1">
+                    <span>📄</span>
+                    <span>{category.stats.papers}개</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <span>💡</span>
+                    <span>{category.stats.recommendations}개 추천</span>
+                  </div>
+                </div>
+
+                <div className="mt-6 flex items-center text-sm font-medium text-gray-900 group-hover:text-indigo-600 transition">
+                  자세히 보기
+                  <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t bg-white/80 backdrop-blur-sm mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center text-gray-500 text-sm">
+            <p>Health Knowledge © 2025 - 건강한 삶을 위한 과학적 정보 🌱</p>
+            <p className="mt-2">Made by <a href="https://github.com/kimpi32" className="text-indigo-600 hover:underline">@kimpi32</a></p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
