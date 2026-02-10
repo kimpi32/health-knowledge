@@ -1,0 +1,37 @@
+{
+  "name": "Health Magazine",
+  "short_name": "Health Mag",
+  "description": "AI가 전하는 쉬운 건강 이야기",
+  "start_url": "/health/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4F46E5",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/health/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/health/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "lifestyle", "education"],
+  "shortcuts": [
+    {
+      "name": "식이",
+      "url": "/health/diet",
+      "description": "식이 카테고리"
+    },
+    {
+      "name": "운동",
+      "url": "/health/exercise",
+      "description": "운동 카테고리"
+    }
+  ]
+}
